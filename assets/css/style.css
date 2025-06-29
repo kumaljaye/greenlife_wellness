@@ -1,12 +1,11 @@
 /* --------------------------------------------------------------
    [-- CSS Variables & Root Styles --]
-   Using variables makes it easy to change the theme's colors later.
 -------------------------------------------------------------- */
 :root {
   --bg-dark: #121212;
   --bg-surface: #1E1E1E;
-  --brand-green: #2ECC71; /* A vibrant, modern green */
-  --accent-gold: #FFC107; /* A striking gold for accents */
+  --brand-green: #2ECC71;
+  --accent-gold: #FFC107;
   --text-primary: #E0E0E0;
   --text-secondary: #A0A0A0;
   --border-color: rgba(255, 255, 255, 0.1);
@@ -34,8 +33,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* --------------------------------------------------------------
    [-- Buttons --]
-   Justifying this choice: A strong accent color makes the primary
-   call-to-action (CTA) unmissable, guiding the user's eye.
 -------------------------------------------------------------- */
 .btn-accent {
     background-color: var(--accent-gold);
@@ -61,13 +58,12 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     background-color: var(--accent-gold);
 }
 
-
 /* --------------------------------------------------------------
    [-- Navigation Bar --]
 -------------------------------------------------------------- */
 .navbar {
-    background: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
 }
@@ -110,9 +106,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* --------------------------------------------------------------
    [-- Services Section --]
-   Justifying this choice: Instead of hard shadows which don't work
-   on dark backgrounds, we use a subtle glowing border on hover.
-   This is a modern technique for creating depth in dark UIs.
 -------------------------------------------------------------- */
 .services-bg {
     background-color: var(--bg-surface);
@@ -148,7 +141,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 .service-card .card-text {
     color: var(--text-secondary);
-    flex-grow: 1; /* Makes card-text fill space */
+    flex-grow: 1;
 }
 
 /* --------------------------------------------------------------
@@ -159,24 +152,22 @@ footer {
 }
 .text-brand {
     color: var(--brand-green) !important;
+    letter-spacing: 1px;
 }
 .footer-link {
     text-decoration: none;
     color: var(--text-secondary);
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 .footer-link:hover {
     color: var(--accent-gold);
+    text-decoration: underline;
 }
 
-
-/*
- * --------------------------------------------------------------
- * [-- Styles for Header --]
- * --------------------------------------------------------------
- */
-
-/* Style for the header on all internal pages */
+/* --------------------------------------------------------------
+   [-- Header (Internal Pages) --]
+-------------------------------------------------------------- */
 .page-header {
     background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.8)), url('../images/header-bg.jpg') no-repeat center center;
     background-size: cover;
@@ -191,12 +182,9 @@ footer {
     font-style: italic;
 }
 
-
-header h1 {
-    color: #cac35f !important;
-}
-
-/* Style for the team member cards */
+/* --------------------------------------------------------------
+   [-- Team Member Cards --]
+-------------------------------------------------------------- */
 .team-card {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -204,7 +192,7 @@ header h1 {
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    height: 100%; /* Ensures cards in the same row are equal height */
+    height: 100%;
 }
 
 .team-card:hover {
@@ -242,19 +230,13 @@ header h1 {
     margin-bottom: 1rem;
 }
 
-
-
-/*
- * --------------------------------------------------------------
- * [-- Styles for Services Page --]
- * --------------------------------------------------------------
- */
-
+/* --------------------------------------------------------------
+   [-- Services Page --]
+-------------------------------------------------------------- */
 .service-detail-section {
     padding: 4rem 0;
 }
 
-/* Add a border to separate sections, but not after the last one */
 .service-detail-section:not(:last-of-type) {
     border-bottom: 1px solid var(--border-color);
 }
@@ -268,7 +250,6 @@ header h1 {
     font-weight: 400;
 }
 
-/* Custom list style for service features */
 .service-features-list {
     list-style: none;
     padding-left: 0;
@@ -282,9 +263,8 @@ header h1 {
     font-size: 1.05rem;
 }
 
-/* This creates the custom checkmark using CSS */
 .service-features-list li::before {
-    content: '✔'; /* You can also use a custom icon font like FontAwesome */
+    content: '✔';
     position: absolute;
     left: 0;
     top: 2px;
@@ -292,11 +272,9 @@ header h1 {
     font-weight: 600;
 }
 
-/*
- * --------------------------------------------------------------
- * [-- Styles for Contact Page --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- Contact Page --]
+-------------------------------------------------------------- */
 .contact-info-box, .contact-form-box {
     background-color: var(--bg-surface);
     padding: 2rem;
@@ -316,7 +294,7 @@ header h1 {
     color: var(--brand-green);
     margin-right: 1.5rem;
     margin-top: 0.25rem;
-    min-width: 25px; /* Aligns the text vertically */
+    min-width: 25px;
 }
 
 .contact-info-item p {
@@ -336,21 +314,17 @@ header h1 {
     width: 100%;
     height: 100%;
     border: 0;
-    filter: invert(90%) grayscale(80%); /* Inverts map colors for dark theme */
+    filter: invert(90%) grayscale(80%);
 }
 
-/* Style for form inputs on focus */
 .form-control:focus {
     border-color: var(--brand-green);
     box-shadow: 0 0 0 0.25rem rgba(46, 204, 113, 0.25);
 }
 
-
-/*
- * --------------------------------------------------------------
- * [-- Styles for Form Containers (Login/Register) --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- Form Containers (Login/Register) --]
+-------------------------------------------------------------- */
 .form-container {
     background-color: var(--bg-surface);
     padding: 2.5rem;
@@ -358,11 +332,9 @@ header h1 {
     border: 1px solid var(--border-color);
 }
 
-/*
- * --------------------------------------------------------------
- * [-- Styles for My Appointments Page --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- My Appointments Page --]
+-------------------------------------------------------------- */
 .appointment-card {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -388,29 +360,24 @@ header h1 {
     color: var(--accent-gold);
 }
 
-/*
- * --------------------------------------------------------------
- * [-- Styles for Admin Dashboard --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- Admin Dashboard --]
+-------------------------------------------------------------- */
 .stat-card {
     background-color: var(--bg-surface);
     border-radius: 10px;
     border: 1px solid var(--border-color);
 }
 
-
-/*
- * --------------------------------------------------------------
- * [-- Styles for Inquiry Management --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- Inquiry Management --]
+-------------------------------------------------------------- */
 .accordion-item.inquiry-item-new .accordion-button {
-    font-weight: 600; /* Make the title of new inquiries bold */
+    font-weight: 600;
 }
 
 .message-body {
-    white-space: pre-wrap; /* Preserves line breaks from the textarea */
+    white-space: pre-wrap;
     background-color: var(--bg-dark);
     padding: 1rem;
     border-radius: 5px;
@@ -420,11 +387,9 @@ header h1 {
     color: var(--bg-dark) !important;
 }
 
-/*
- * --------------------------------------------------------------
- * [-- Styles for Message Bubbles --]
- * --------------------------------------------------------------
- */
+/* --------------------------------------------------------------
+   [-- Message Bubbles --]
+-------------------------------------------------------------- */
 .message-bubble {
     max-width: 80%;
     margin-bottom: 1rem;
@@ -434,15 +399,15 @@ header h1 {
 .message-bubble.client {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
-    margin-right: auto; /* Aligns to the left */
+    margin-right: auto;
 }
 .message-bubble.staff {
-    background-color: #193a2b; /* A slightly different dark green */
-    margin-left: auto; /* Aligns to the right */
+    background-color: #193a2b;
+    margin-left: auto;
     text-align: right;
 }
 .message-bubble .message-body {
-    background-color: transparent !important; /* Override other styles */
+    background-color: transparent !important;
     padding: 0 !important;
     margin-bottom: 0.25rem;
 }

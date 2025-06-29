@@ -3,12 +3,7 @@ define('BASE_URL', '/greenlife_wellness/');
 $page_title = 'About Us | GreenLife Wellness Center';
 include_once('includes/db_connect.php'); // Include DB connection
 
-// --- FETCH DYNAMIC CONTENT FOR THE 'OUR STORY' SECTION ---
-$stmt = $conn->prepare("SELECT content_title, content_body FROM content WHERE page_key = 'about_us_story'");
-$stmt->execute();
-$result = $stmt->get_result();
-$about_content = $result->fetch_assoc();
-$stmt->close();
+
 
 include_once('includes/header.php');
 ?>
@@ -23,11 +18,10 @@ include_once('includes/header.php');
 <section class="py-5">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba9996a?q=80&w=2070&auto=format&fit=crop" alt="A doctor consulting with a patient" class="img-fluid rounded-3 shadow">
+            <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center" style="min-height: 350px; max-height: 800px; overflow: hidden;">
+                <img src="https://plus.unsplash.com/premium_photo-1674841252391-efd5fe8266d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QSUyMGRvY3RvciUyMGNvbnN1bHRpbmclMjB3aXRoJTIwYSUyMHBhdGllbnR8ZW58MHwxfDB8fHww" alt="A doctor consulting with a patient" class="img-fluid rounded-3 shadow" style="height: 100%; object-fit: cover; min-height: 250px; max-height: 700px;">
             </div>
             <div class="col-lg-6">
-                <h2 class="section-title">Our Story</h2>
                 <p class="mb-4">GreenLife Wellness was founded with a simple mission: to create a sanctuary where individuals can find holistic healing, balance, and rejuvenation. Our journey began with a passion for blending ancient wisdom with modern science, offering a unique approach to wellness that nurtures the mind, body, and spirit.</p>
                 <h2 class="section-title">Our Philosophy</h2>
                 <p class="mb-4">We believe that true wellness is more than the absence of illness—it's a vibrant state of being. At GreenLife, we focus on preventive care, personalized therapies, and empowering our clients to take charge of their health. Our integrated services include Ayurveda, yoga, nutrition, physiotherapy, and more, all delivered by a compassionate team of experts.</p>
@@ -47,6 +41,6 @@ include_once('includes/header.php');
 </section>
 
 <?php
-$conn->close();
+
 include_once('includes/footer.php');
 ?>

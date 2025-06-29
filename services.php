@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1600161427848-5401659732b6?q=80&w=1974&auto=format&fit=crop" alt="Ayurvedic Therapy" class="img-fluid rounded-3 shadow">
+                    <img src="https://media.istockphoto.com/id/1162149826/photo/shirodhara-an-ayurvedic-healing-technique-oil-dripping-on-the-female-forehead-portrait-of-a.webp?a=1&b=1&s=612x612&w=0&k=20&c=Uk5CChV22akzk7Idx0SK39KWVVi1yj44e4voDPUuwck=" alt="Ayurvedic Therapy" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title">Ayurvedic Therapy</h2>
@@ -55,7 +55,7 @@
                         <li>Pranayama (Breathing Techniques)</li>
                         <li>Private and Group Sessions Available</li>
                     </ul>
-                    <a href="<?php echo BASE_URL; ?>client/book_appointment.php" class="btn btn-accent mt-3">View Class Schedule</a>
+                    <a href="<?php echo BASE_URL; ?>client/book_appointment.php" class="btn btn-accent mt-3">Book Session</a>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1519824145371-296894a0d72b?q=80&w=2070&auto=format&fit=crop" alt="Physiotherapy and Massage Therapy" class="img-fluid rounded-3 shadow">
+                    <img src="https://media.istockphoto.com/id/2158934402/photo/therapist-treating-female-patient-in-clinic.webp?a=1&b=1&s=612x612&w=0&k=20&c=mHfgMELpGalQmE0Csbgr_az7opIRXhz-30XLnIVP-pk=" alt="Physiotherapy and Massage Therapy" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <h2 class="section-title">Physiotherapy</h2>
@@ -109,7 +109,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" alt="Massage Therapy" class="img-fluid rounded-3 shadow">
+                    <img src="https://media.istockphoto.com/id/1480533125/photo/asian-woman-has-thai-massage-of-neck-stretching-for-treat-painful-from-office-syndrome.webp?a=1&b=1&s=612x612&w=0&k=20&c=viFUyurhWzHeH3MjkCb1Vh9eJ49fk4T23KvYRvbMnJU=" alt="Massage Therapy" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title">Massage Therapy</h2>
@@ -132,7 +132,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=2070&auto=format&fit=crop" alt="Mindfulness and Meditation Workshop" class="img-fluid rounded-3 shadow">
+                    <img src="https://media.istockphoto.com/id/1453736358/photo/yogi-with-headphones-listening-yoga-audio-guide.webp?a=1&b=1&s=612x612&w=0&k=20&c=Bt7uwvkUjObzVhbx5FpOoAX9jkMAwKNFju52AI94g9M=" alt="Mindfulness and Meditation Workshop" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <h2 class="section-title">Mindfulness & Meditation Workshop</h2>
