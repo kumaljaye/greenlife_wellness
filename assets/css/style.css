@@ -1,0 +1,448 @@
+/* --------------------------------------------------------------
+   [-- CSS Variables & Root Styles --]
+   Using variables makes it easy to change the theme's colors later.
+-------------------------------------------------------------- */
+:root {
+  --bg-dark: #121212;
+  --bg-surface: #1E1E1E;
+  --brand-green: #2ECC71; /* A vibrant, modern green */
+  --accent-gold: #FFC107; /* A striking gold for accents */
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0A0A0;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --------------------------------------------------------------
+   [-- General & Typography --]
+-------------------------------------------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Lora', serif;
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--brand-green);
+    margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------
+   [-- Buttons --]
+   Justifying this choice: A strong accent color makes the primary
+   call-to-action (CTA) unmissable, guiding the user's eye.
+-------------------------------------------------------------- */
+.btn-accent {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: #121212;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-accent:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+}
+
+.btn-outline-accent {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transition: all 0.3s ease;
+}
+.btn-outline-accent:hover {
+    color: #121212;
+    background-color: var(--accent-gold);
+}
+
+
+/* --------------------------------------------------------------
+   [-- Navigation Bar --]
+-------------------------------------------------------------- */
+.navbar {
+    background: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--brand-green) !important;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary) !important;
+}
+
+/* --------------------------------------------------------------
+   [-- Hero Section --]
+-------------------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1506126613408-4e05960274e5?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-section .display-3 {
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+}
+
+/* --------------------------------------------------------------
+   [-- Services Section --]
+   Justifying this choice: Instead of hard shadows which don't work
+   on dark backgrounds, we use a subtle glowing border on hover.
+   This is a modern technique for creating depth in dark UIs.
+-------------------------------------------------------------- */
+.services-bg {
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-card {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-green);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+}
+
+.service-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.service-card:hover .card-img-top {
+    opacity: 1;
+}
+.service-card .card-title {
+    color: var(--brand-green);
+}
+.service-card .card-text {
+    color: var(--text-secondary);
+    flex-grow: 1; /* Makes card-text fill space */
+}
+
+/* --------------------------------------------------------------
+   [-- Footer --]
+-------------------------------------------------------------- */
+footer {
+    background-color: var(--bg-surface);
+}
+.text-brand {
+    color: var(--brand-green) !important;
+}
+.footer-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--accent-gold);
+}
+
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Header --]
+ * --------------------------------------------------------------
+ */
+
+/* Style for the header on all internal pages */
+.page-header {
+    background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.8)), url('../images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+
+header h1 {
+    color: #cac35f !important;
+}
+
+/* Style for the team member cards */
+.team-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%; /* Ensures cards in the same row are equal height */
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.team-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.team-card:hover img {
+    border-color: var(--brand-green);
+}
+
+.team-card h5 {
+    color: var(--brand-green);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.team-card p.title {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Services Page --]
+ * --------------------------------------------------------------
+ */
+
+.service-detail-section {
+    padding: 4rem 0;
+}
+
+/* Add a border to separate sections, but not after the last one */
+.service-detail-section:not(:last-of-type) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-detail-section h2 {
+    margin-bottom: 0.25rem;
+}
+
+.service-detail-section h5 {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Custom list style for service features */
+.service-features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.service-features-list li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+/* This creates the custom checkmark using CSS */
+.service-features-list li::before {
+    content: '✔'; /* You can also use a custom icon font like FontAwesome */
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--brand-green);
+    font-weight: 600;
+}
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Contact Page --]
+ * --------------------------------------------------------------
+ */
+.contact-info-box, .contact-form-box {
+    background-color: var(--bg-surface);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-item .icon {
+    font-size: 1.2rem;
+    color: var(--brand-green);
+    margin-right: 1.5rem;
+    margin-top: 0.25rem;
+    min-width: 25px; /* Aligns the text vertically */
+}
+
+.contact-info-item p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    height: 350px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: invert(90%) grayscale(80%); /* Inverts map colors for dark theme */
+}
+
+/* Style for form inputs on focus */
+.form-control:focus {
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 0.25rem rgba(46, 204, 113, 0.25);
+}
+
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Form Containers (Login/Register) --]
+ * --------------------------------------------------------------
+ */
+.form-container {
+    background-color: var(--bg-surface);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for My Appointments Page --]
+ * --------------------------------------------------------------
+ */
+.appointment-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.appointment-card.upcoming {
+    border-left: 5px solid var(--brand-green);
+}
+
+.appointment-card.past {
+     border-left: 5px solid var(--text-secondary);
+}
+
+.appointment-card .card-title {
+    color: var(--brand-green);
+    font-weight: 600;
+}
+
+.appointment-card .card-text i {
+    color: var(--accent-gold);
+}
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Admin Dashboard --]
+ * --------------------------------------------------------------
+ */
+.stat-card {
+    background-color: var(--bg-surface);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Inquiry Management --]
+ * --------------------------------------------------------------
+ */
+.accordion-item.inquiry-item-new .accordion-button {
+    font-weight: 600; /* Make the title of new inquiries bold */
+}
+
+.message-body {
+    white-space: pre-wrap; /* Preserves line breaks from the textarea */
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 5px;
+}
+.bg-accent {
+    background-color: var(--accent-gold) !important;
+    color: var(--bg-dark) !important;
+}
+
+/*
+ * --------------------------------------------------------------
+ * [-- Styles for Message Bubbles --]
+ * --------------------------------------------------------------
+ */
+.message-bubble {
+    max-width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+}
+.message-bubble.client {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    margin-right: auto; /* Aligns to the left */
+}
+.message-bubble.staff {
+    background-color: #193a2b; /* A slightly different dark green */
+    margin-left: auto; /* Aligns to the right */
+    text-align: right;
+}
+.message-bubble .message-body {
+    background-color: transparent !important; /* Override other styles */
+    padding: 0 !important;
+    margin-bottom: 0.25rem;
+}
