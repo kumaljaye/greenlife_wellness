@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($new_password)) {
         // A new password was entered, so we hash it and include it in the update
         $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-        $sql = "UPDATE users SET full_name = ?, email = ?, phone_number = ?, date_of_birth = ?, gender = ?, password = ? WHERE id = ?";
+        $sql = "UPDATE users SET full_name = ?, email = ?, phone_number = ?, dob = ?, gender = ?, password = ? WHERE id = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssssi", $full_name, $email, $phone, $dob, $gender, $hashed_password, $user_id);
+        $stmt->bind_param("ssssssi", $full_name, $email, $phone, $dob, $gender, $hashed_password, $user_id);
     } else {
         // No new password, so we don't update the password field
         $sql = "UPDATE users SET full_name = ?, email = ?, phone_number = ?, dob = ?, gender = ? WHERE id = ?";

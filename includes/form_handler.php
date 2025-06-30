@@ -43,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    $stmt->close();
-    $conn->close();
+    
+    
 
 } else {
     // If the page is accessed directly without a POST request, redirect to the homepage.

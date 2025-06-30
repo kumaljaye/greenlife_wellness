@@ -56,12 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // --- 5. INSERT THE NEW USER INTO THE DATABASE ---
-            $sql_insert = "INSERT INTO users (full_name, email, phone_number, password, role, date_of_birth, gender) VALUES (?, ?, ?, ?, 'client', ?, ?)";
+            $sql_insert = "INSERT INTO users (full_name, email, phone_number, password, role, dob, gender) VALUES (?, ?, ?, ?, 'client', ?, ?)";
             
             // Use another PREPARED STATEMENT for the INSERT query
             $stmt_insert = $conn->prepare($sql_insert);
             // "ssssss" indicates six string parameters
-            $stmt_insert->bind_param("sssss", $fullName, $email, $phone, $hashed_password, $dob, $gender);
+            $stmt_insert->bind_param("ssssss", $fullName, $email, $phone, $hashed_password, $dob, $gender);
 
             if ($stmt_insert->execute()) {
                 $success_message = "Registration successful! You can now log in.";

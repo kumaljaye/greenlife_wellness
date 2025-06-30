@@ -162,15 +162,21 @@ include_once('includes/header.php');
                                             <td>
                                                 <span class="badge bg-primary">Scheduled</span>
                                             </td>
-                                            <td>
-                                                <form method="post" class="d-inline">
-                                                    <input type="hidden" name="appointment_id" value="<?= $appt['id'] ?>">
-                                                    <button type="submit" name="complete" class="btn btn-sm btn-outline-success">Mark Completed</button>
-                                                </form>
-                                                <form method="post" class="d-inline">
-                                                    <input type="hidden" name="appointment_id" value="<?= $appt['id'] ?>">
-                                                    <button type="submit" name="cancel" class="btn btn-sm btn-outline-danger">Cancel</button>
-                                                </form>
+                                            <td style="min-width:180px;">
+                                                <div class="row g-2 flex-nowrap align-items-stretch">
+                                                    <div class="col h-100">
+                                                        <form method="post" class="d-inline h-100">
+                                                            <input type="hidden" name="appointment_id" value="<?= $appt['id'] ?>">
+                                                            <button type="submit" name="complete" class="btn btn-sm btn-outline-success w-100 h-100">Mark Completed</button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col h-100">
+                                                        <form method="post" class="d-inline h-100">
+                                                            <input type="hidden" name="appointment_id" value="<?= $appt['id'] ?>">
+                                                            <button type="submit" name="cancel" class="btn btn-sm btn-outline-danger w-100 h-100">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php endwhile; ?>

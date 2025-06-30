@@ -119,6 +119,17 @@ include_once('../includes/header.php');
             <!-- Main Content -->
             <div class="col-md-9">
                 <div class="card mb-4">
+                    <?php if (isset($_GET['status']) && $_GET['status'] === 'added'): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Service added successfully!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif (isset($_GET['status']) && $_GET['status'] === 'updated'): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Service updated successfully!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h4 class="mb-0"><?php echo $page_mode; ?> Service</h4>
                     </div>
